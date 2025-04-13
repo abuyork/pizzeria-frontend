@@ -31,7 +31,7 @@ export default function OrdersPage() {
   const {setPausedOrders, setProcessOrders, setFinishedOrders} = actionDispatch(useDispatch());
   const {orderBuilder, authMember} = useGlobals();
   const history = useHistory();
-  const [orderInquiry, setOrderInquiry] = useState<OrderInquery>({
+  const [orderInquiry] = useState<OrderInquery>({
     page: 1,
     limit: 5,
     orderStatus: OrderStatus.PAUSE,
@@ -52,7 +52,13 @@ export default function OrdersPage() {
     .then((data) => setFinishedOrders(data))
     .catch((err) => console.log(err));
 
-  }, [orderInquiry, orderBuilder]);
+  }, [
+    orderInquiry, 
+    orderBuilder,
+    setPausedOrders,
+    setProcessOrders,
+    setFinishedOrders
+  ]);
 
   const handleChange = (e: SyntheticEvent, newValue: string)  => {
     setValue(newValue);

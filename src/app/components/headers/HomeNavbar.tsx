@@ -1,4 +1,4 @@
-import { Box, Button, Container, ListItemIcon, Menu, MenuItem, Stack } from "@mui/material";
+import { Box, Button, Container, ListItemIcon, Menu, MenuItem, Stack, IconButton } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import Basket from "./Basket";
 import { CartItem } from "../../../lib/types/search";
@@ -108,14 +108,18 @@ export default function HomeNavbar(props: HomeNavbarProps) {
                         <Button className="login-button" variant="contained" onClick={()=> setLoginOpen(true)}>Login</Button>
                     </Box>
                     ) : (
-                    <img 
-                    className="user-avatar"
-                    src={ authMember?.memberImage? `${serverApi}/${authMember.memberImage}`
-                        :"/icons/default-user.svg"}
-                    aria-haspopup={"true"}
-                    onClick={handleLogoutClick}
-                    
-                    />
+                    <IconButton
+                      onClick={handleLogoutClick}
+                      aria-haspopup="true"
+                      sx={{ p: 0 }} // Remove default padding
+                    >
+                      <img 
+                        className="user-avatar"
+                        src={ authMember?.memberImage? `${serverApi}/${authMember.memberImage}`
+                            :"/icons/default-user.svg"}
+                        alt="User avatar"
+                      />
+                    </IconButton>
                     )}
 
             <Menu

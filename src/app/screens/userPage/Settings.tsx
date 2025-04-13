@@ -71,11 +71,6 @@ export function Settings() {
     }
   }
 
-  const memberImageHandler = (e: T) => {
-    memberUpdateInput.memberImage = e.target.value;
-    setMemberUpdateInput({...memberUpdateInput});
-  };
-
   const handleImageViewer = (e: T) => {
     const file = e.target.files[0];
     const fileType = file.type,
@@ -97,7 +92,7 @@ export function Settings() {
     <Grid container spacing={4} className="settings-grid">
       <Grid item xs={12} md={4} className="image-section">
         <Box className="profile-image-container">
-          <img src={memberImage} className="profile-image" />
+          <img src={memberImage} className="profile-image" alt="User profile"/>
           <div className="upload-overlay">
             <p>Formats : JPG, JPEG, PNG</p>
             <Button 

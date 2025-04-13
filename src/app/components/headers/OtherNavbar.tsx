@@ -1,4 +1,4 @@
-import { Box, Button, Container, ListItemIcon, Menu, MenuItem, Stack } from "@mui/material";
+import { Box, Button, Container, ListItemIcon, Menu, MenuItem, Stack, IconButton } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import Basket from "./Basket";
 import { CartItem } from "../../../lib/types/search";
@@ -12,7 +12,6 @@ interface OtherNavbarProps {
     onRemove: (item: CartItem) => void;
     onDelete: (item: CartItem) => void;
     onDeleteAll: () => void;
-    setSignupOpen:(isopen: boolean) => void;
     setLoginOpen:(isopen: boolean) => void;
     handleLogoutClick: (e: React.MouseEvent<HTMLElement>) => void;
     anchorEl: HTMLElement | null;
@@ -25,8 +24,7 @@ export default function OtherNavbar(props: OtherNavbarProps) {
         onAdd, 
         onDelete, 
         onRemove, 
-        onDeleteAll,
-        setSignupOpen, 
+        onDeleteAll, 
         setLoginOpen, 
         handleLogoutClick, 
         anchorEl, 
@@ -83,13 +81,18 @@ export default function OtherNavbar(props: OtherNavbarProps) {
                         <Button className="login-button" variant="contained" onClick={() => setLoginOpen(true)}>Login</Button>
                     </Box>
                     ) : (
-                    <img 
-                    className="user-avatar"
-                    src={ authMember?.memberImage? `${serverApi}/${authMember.memberImage}`
-                    :"/icons/default-user.svg"}
-                    aria-haspopup={"true"}
-                    onClick={handleLogoutClick}
-                    />
+                      <IconButton
+                        onClick={handleLogoutClick}
+                        aria-haspopup="true"
+                        sx={{ p: 0 }}
+                      >
+                        <img 
+                        className="user-avatar"
+                        src={ authMember?.memberImage? `${serverApi}/${authMember.memberImage}`
+                        :"/icons/default-user.svg"}
+                        alt="User avatar"
+                        />
+                      </IconButton>
                     )}
                 </Stack>
                 <Menu
