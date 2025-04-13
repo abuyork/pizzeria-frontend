@@ -1,0 +1,313 @@
+.homepage {
+  width: 100%;
+  height: auto;
+}
+
+/* Popular Dishes*/
+
+.homepage .popular-dishes-frame {
+width: 100%;
+height: 580px;
+display: flex;
+background: #f8f8ff;
+padding-bottom: 30px;
+}
+
+.homepage .popular-dishes-frame .popular-section {
+margin-top: 45px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+
+.homepage .popular-dishes-frame .popular-section .cards-frame {
+width: 100%;
+margin-top: 43px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+
+.homepage .popular-dishes-frame .popular-section .category-title{
+text-align: center;
+font-family: 'Roboto Serif';
+font-size: 33px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 1.44px;
+color: #514c4c;
+position: relative;
+padding-bottom: 15px;
+}
+
+.homepage .popular-dishes-frame .popular-section .category-title::after {
+content: "";
+position: absolute;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+width: 80px;
+height: 3px;
+background-color: #d7b686;
+}
+
+.homepage .popular-dishes-frame .cards-frame .card {
+min-height: 430px;
+min-width: 280px;
+cursor: pointer;
+margin-left: 10px;
+border-radius: 12px;
+overflow: hidden;
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.homepage .popular-dishes-frame .cards-frame .card:hover {
+transform: translateY(-5px);
+box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.homepage .popular-dishes-frame .cards-frame .card .card-cover {
+background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0) 200px
+),
+linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 300px);
+}
+
+.homepage .popular-dishes-frame .cards-frame .card img {
+object-fit: cover;
+width: 100%;
+height: 100%;
+background-color: #f0f0f0;
+background-image: linear-gradient(135deg, #f5f5f5 25%, #e0e0e0 25%, #e0e0e0 50%, #f5f5f5 50%, #f5f5f5 75%, #e0e0e0 75%, #e0e0e0 100%);
+background-size: 56.57px 56.57px;
+background-position: center;
+}
+
+.homepage .popular-dishes-frame .no-data {
+width: 100%;
+height: 300px;
+display: flex;
+justify-content: center;
+align-items: center;
+text-transform: capitalize;
+font-family: "Poppins";
+font-style: normal;
+font-weight: 400;
+font-size: 30px;
+line-height: 34px;
+color: #e3c08d;
+}
+
+
+/* New Products */
+
+.homepage .new-products-frame {
+width: 100%;
+height: 605px;
+background: #f8f8ff;
+display: flex;
+padding: 30px 0;
+border-bottom: 1px solid rgba(215, 182, 134, 0.3);
+}
+
+.homepage .main {
+margin-top: 45px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.homepage .new-products-frame .category-title {
+font-family: 'Roboto Serif';
+font-style: normal;
+font-weight: 600;
+font-size: 33px;
+line-height: 43px;
+text-align: center;
+color: #514c4c;
+position: relative;
+padding-bottom: 15px;
+letter-spacing: 1px;
+}
+
+.homepage .new-products-frame .category-title::after {
+content: "";
+position: absolute;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+width: 80px;
+height: 3px;
+background-color: #d7b686;
+}
+
+.homepage .new-products-frame .main .cards-frame {
+width: 100%;
+margin: 47px 2px 2px 2px;
+flex-direction: row;
+justify-content: space-between;
+}
+
+.homepage .new-products-frame .product-detail {
+width: auto;
+height: 49%;
+display: flex;
+justify-content: center;
+margin-top: -12px;
+border-top: 1px solid;
+border-color: rgba(215, 182, 134, 0.3);
+background-color: #fff;
+}
+
+.homepage .new-products-frame .product-detail .info {
+width: 100%;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0 15px;
+}
+
+.homepage .new-products-frame .product-detail .title {
+width: auto;
+min-width: 85px;
+font-weight: 600;
+font-size: 14px;
+color: #343434;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+margin-right: 12px;
+}
+
+.homepage .new-products-frame .product-detail .price {
+margin-left: 10px;
+width: auto;
+font-weight: 700;
+color: #d7b686;
+}
+
+.homepage .new-products-frame .main .card {
+height: 360px;
+width: 290px;
+cursor: pointer;
+margin-left: 19px;
+border-radius: 12px;
+overflow: hidden;
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.homepage .new-products-frame .main .card:hover {
+transform: translateY(-5px);
+box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.homepage .new-products-frame .main .card img {
+object-fit: cover;
+width: 100%;
+height: 100%;
+background-color: #f0f0f0;
+background-image: linear-gradient(135deg, #f5f5f5 25%, #e0e0e0 25%, #e0e0e0 50%, #f5f5f5 50%, #f5f5f5 75%, #e0e0e0 75%, #e0e0e0 100%);
+background-size: 56.57px 56.57px;
+background-position: center;
+}
+
+.homepage .new-products-frame .product-sale {
+position: absolute;
+margin-top: 10px;
+margin-right: 10px;
+right: 0;
+z-index: 100;
+min-width: 90px;
+height: 32px;
+width: 32px;
+display: flex;
+align-items: center;
+justify-content: center;
+background: #dd9595;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+border-radius: 20px;
+font-family: "Poppins", sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+letter-spacing: 0.3px;
+line-height: 15px;
+color: #ffffff;
+text-transform: uppercase;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.homepage .new-products-frame .product-detail .divider {
+margin: 0 12px;
+min-width: 2px;
+background-color: #d9d9d9;
+}
+
+.homepage .new-products-frame .product-detail .views {
+display: flex;
+align-items: center;
+font-weight: 500;
+color: #555;
+}
+
+.homepage .new-products-frame .no-data {
+width: 100%;
+height: 300px;
+display: flex;
+justify-content: center;
+align-items: center;
+text-transform: capitalize;
+font-family: "Poppins";
+font-style: normal;
+font-weight: 400;
+font-size: 30px;
+line-height: 34px;
+color: #e3c08d;
+}
+
+/** ADVERTISEMENT **/
+
+.homepage .ads-restaurant-frame {
+width: 100%;
+height: 650px;
+display: flex;
+overflow: hidden;
+transform: perspective(0px);
+box-shadow: -3px 0px 20px 14px #34343480;
+}
+
+.homepage .ads-restaurant-frame .video-container {
+width: 100%;
+height: 100%;
+position: relative;
+overflow: hidden;
+background: #0c0e12;
+}
+
+.homepage .ads-restaurant-frame .ads-video {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
+
+/* Adding responsive styling for the video */
+@media screen and (max-width: 1200px) {
+  .homepage .ads-restaurant-frame {
+    height: 550px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .homepage .ads-restaurant-frame {
+    height: 450px;
+  }
+}

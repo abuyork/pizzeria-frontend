@@ -1,0 +1,197 @@
+/* Cal AI - Modern UI Enhancements */
+
+.calai-page {
+  width: 100%;
+  min-height: 850px;
+  display: flex;
+  background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
+  padding: 40px 0;
+}
+
+.calai-page .calai-container {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  flex-direction: row;
+}
+
+.calai-page .calai-content {
+  width: 100%;
+  min-height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Card styling enhancement */
+.calai-page .MuiPaper-root {
+  box-shadow: 0 10px 30px rgba(0, 0, 20, 0.08);
+  transition: all 0.3s ease;
+}
+
+.calai-page .MuiPaper-root:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 20, 0.12);
+}
+
+/* Typography enhancements */
+.calai-page .MuiTypography-h4 {
+  background: linear-gradient(90deg, #2c3e50, #4a5568);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: -0.5px;
+}
+
+.calai-page .MuiTypography-subtitle1 {
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+
+/* Animation for the loading state */
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+.calai-page .analyzing {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (min-width: 600px) {
+  .calai-page {
+    padding: 20px 0;
+  }
+  
+  .calai-page .calai-container {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Upload area enhancement */
+.calai-page [class*="dashed"] {
+  background: linear-gradient(145deg, #f9f9ff, #f0f0ff);
+  border: 2px dashed rgba(123, 97, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.calai-page [class*="dashed"]:hover {
+  border-color: rgba(123, 97, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Custom button styling */
+.upload-button, 
+.calai-page .MuiButton-contained {
+  background: linear-gradient(90deg, #d7b668, #c6a55a) !important;
+  border-radius: 8px !important;
+  letter-spacing: 0.5px;
+  font-weight: 500 !important;
+  padding: 10px 20px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 12px rgba(215, 182, 104, 0.3) !important;
+  text-transform: none !important;
+  color: #2c3e50 !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.2) !important;
+}
+
+.upload-button:hover,
+.calai-page .MuiButton-contained:hover {
+  background: linear-gradient(90deg, #c6a55a, #b59449) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(215, 182, 104, 0.4) !important;
+  color: #2c3e50 !important;
+}
+
+/* Food image container */
+.food-image-container {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.food-image-container:hover {
+  transform: scale(1.02);
+}
+
+/* Results container enhancement */
+.calai-page .MuiPaper-root[style*="f9f9f9"] {
+  background: linear-gradient(145deg, #ffffff, #f8f9ff) !important;
+  border-left: 4px solid #d7b668;
+}
+
+/* Results animation */
+.results-appear {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* List item enhancements */
+.calai-page .MuiListItem-root {
+  padding: 12px 6px;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+}
+
+.calai-page .MuiListItem-root:hover {
+  background-color: rgba(123, 97, 255, 0.04);
+}
+
+.calai-page .MuiListItemText-primary {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.calai-page .MuiListItemText-secondary {
+  color: #64748b;
+}
+
+/* Nutritional info styling */
+.calai-page .MuiDivider-root {
+  background-color: rgba(123, 97, 255, 0.15);
+  height: 2px;
+  border-radius: 2px;
+}
+
+.calai-page [class*="text.secondary"] {
+  color: #64748b !important;
+  font-weight: 400;
+}
+
+/* Input field enhancement */
+.calai-page .MuiTextField-root .MuiOutlinedInput-root {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.calai-page .MuiTextField-root .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(215, 182, 104, 0.5);
+}
+
+.calai-page .MuiTextField-root .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #d7b668;
+  border-width: 2px;
+}
+
+/* Empty state icon enhancement */
+.calai-page .MuiSvgIcon-root[style*="color: #ccc"] {
+  color: rgba(123, 97, 255, 0.2) !important;
+  filter: drop-shadow(0 4px 6px rgba(123, 97, 255, 0.1));
+}
