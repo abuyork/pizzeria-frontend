@@ -8,8 +8,6 @@ import Pagination from "@mui/material/Pagination";
 import PaginationItem from "@mui/material/PaginationItem";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { CssVarsProvider } from "@mui/joy/styles";
-import Card from "@mui/joy/Card";
 
 import { useDispatch, useSelector } from "react-redux";
 import { Dispatch } from "@reduxjs/toolkit";
@@ -58,14 +56,14 @@ useEffect(() => {
           .getProducts(productSearch)
           .then((data) => setProducts(data))
           .catch((err) => console.log(err));
-  }, [productSearch]);
+  }, [productSearch, setProducts]);
 
 useEffect(() => {
     if (searchText === "") {
         productSearch.search = "";
         setProductSearch({ ...productSearch });
     }
-}, [searchText]);
+}, [searchText, productSearch]);
 
 
   /** HANDLERS **/
@@ -211,6 +209,7 @@ const chooseDishHandler = (id: string) => {
                             <img
                               src="/icons/shopping-cart.svg"
                               style={{ display: "flex" }}
+                              alt="Shopping cart icon"
                             />
                           </Button>
                           <Button className={"view-btn"} sx={{ right: "36px" }}>

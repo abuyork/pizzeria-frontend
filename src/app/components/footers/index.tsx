@@ -1,4 +1,4 @@
-import { Box, Container, Stack, Typography, Grid } from "@mui/material";
+import { Box, Container, Typography, Grid } from "@mui/material";
 import { Footers, FooterLink, ContactItem, SocialIcon } from "../../../lib/types/styled";
 
 export default function Footer() {
